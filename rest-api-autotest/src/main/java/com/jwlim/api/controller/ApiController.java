@@ -5,6 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jwlim.api.model.ResponseMsg;
@@ -33,5 +34,16 @@ public class ApiController {
 		   .build();
 		
         return new ResponseEntity<ResponseMsg>(msg, HttpStatus.OK);
+    }
+	
+	@PutMapping(value = "/api/call", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ResponseMsg> getPutCall(
+    	) {
+		ResponseMsg msg = new ResponseMsg();
+		msg.setStatus("405")
+		   .setMessage("api test method not allowed")
+		   .build();
+		
+        return new ResponseEntity<ResponseMsg>(msg, HttpStatus.METHOD_NOT_ALLOWED);
     }
 }
