@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('verify k6') {
       steps {
-        & 'C:\Program Files\k6\k6.exe' version
+        sh 'k6 version'
       }
     }
     stage('run k6 test') {
       steps {
-        & 'C:\Program Files\k6\k6.exe' run --vus 10 --duration 30s stress.js'
+        sh 'k6 run --vus 10 --duration 30s stress.js'
       }
     }
   }
