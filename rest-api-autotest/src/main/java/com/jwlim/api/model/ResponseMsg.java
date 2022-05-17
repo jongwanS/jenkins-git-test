@@ -26,7 +26,7 @@ public class ResponseMsg {
     }
 	
 	public ResponseMsg build(){
-        return new ResponseMsg(this.status,this.message);
+        return this;
     }
 
 	public String getStatus() {

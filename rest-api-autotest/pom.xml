@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jwlim.study</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>rest-api-autotest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rest-api-autotest</name>
 	<description>docker-study</description>
